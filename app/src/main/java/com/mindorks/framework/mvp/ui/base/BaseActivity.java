@@ -54,7 +54,7 @@ public abstract class BaseActivity extends AppCompatActivity
 
     private ActivityComponent mActivityComponent;
 
-    private Unbinder mUnBinder;
+    private Unbinder mUnBinder; // from butter knife to prevent memory leak
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -163,6 +163,7 @@ public abstract class BaseActivity extends AppCompatActivity
         }
     }
 
+    // what's this?
     @Override
     public void openActivityOnTokenExpire() {
         startActivity(LoginActivity.getStartIntent(this));

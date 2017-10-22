@@ -73,7 +73,7 @@ public class ActivityModule {
     }
 
     @Provides
-    @ActivityContext
+    @ActivityContext // what's this?
     Context provideContext() {
         return mActivity;
     }
@@ -94,7 +94,7 @@ public class ActivityModule {
     }
 
     @Provides
-    @PerActivity
+    @PerActivity // what's this?
     SplashMvpPresenter<SplashMvpView> provideSplashPresenter(
             SplashPresenter<SplashMvpView> presenter) {
         return presenter;
@@ -107,14 +107,14 @@ public class ActivityModule {
     }
 
     @Provides
-    @PerActivity
+    @PerActivity // what's this?
     LoginMvpPresenter<LoginMvpView> provideLoginPresenter(
             LoginPresenter<LoginMvpView> presenter) {
         return presenter;
     }
 
     @Provides
-    @PerActivity
+    @PerActivity // what's this?
     MainMvpPresenter<MainMvpView> provideMainPresenter(
             MainPresenter<MainMvpView> presenter) {
         return presenter;
